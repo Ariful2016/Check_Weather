@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="16dp"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/item_back">
+
+            <LinearLayout
+                android:id="@+id/icon_lay"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/icon_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    android:textColor="@color/purple_500"
+                    android:fontFamily="@font/new_rocker" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21 Nov 2022"
+                android:textSize="21sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/new_rocker"
+                app:layout_constraintStart_toEndOf="@id/icon_lay"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:30am"
+                android:textSize="21sp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/new_rocker"
+               app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/feels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feels like: 25"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/new_rocker"
+                app:layout_constraintStart_toEndOf="@id/icon_lay"
+                app:layout_constraintTop_toBottomOf="@id/date" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity: 45"
+                android:textSize="21sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/new_rocker"
+                app:layout_constraintStart_toEndOf="@id/icon_lay"
+                app:layout_constraintTop_toBottomOf="@id/feels" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
